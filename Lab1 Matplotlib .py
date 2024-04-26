@@ -41,12 +41,12 @@ question = text.count('?')
 exclamatory = text.count('!')
 three_dots = len(re.findall(r'\.\.\.(?!\w)', text))
 
-types = ['Звичайні', 'Питальні', 'Окличні', 'Трикрапка']
+types = ['Обычные', 'Вопросительные', 'Окличные', 'Триточка']
 frequency = [ordinary, question, exclamatory, three_dots]
 
 plt.bar(types, frequency, color='lightgreen')
-plt.xlabel('Типи речень')
+plt.xlabel('Типи предложения')
 plt.ylabel('Частота')
-plt.title('Гістограма частоти появи типів речень')
+plt.title('Гистограмма частоты появления типов предложений')
 plt.grid(axis='y', linestyle='--', alpha=0.7)  # добавление пунктирной сетки по оси y
 plt.show()
